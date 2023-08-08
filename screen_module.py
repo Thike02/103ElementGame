@@ -55,7 +55,7 @@ titleLabel2 = tk.Label(titleFrame,
                        )
 
 titleLabel3 = tk.Label(titleFrame,
-                       text="クリックしてスタート",
+                       text="Spaceキーを押すまたはクリックしてスタート",
                        font=('游ゴシック', 16, 'bold'),
                        bg="#343434",
                        foreground="#ffffff"
