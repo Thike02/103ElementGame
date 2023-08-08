@@ -30,6 +30,7 @@ def gameToStart(self):
     sm.ruleFrame.pack(pady=0)
     sm.creditFrame.pack(pady=0)
 
+    sm.titleLabel1.focus_set()
     sm.reset.place_forget()
     sm.timeLabel.place_forget()
     sm.backToStart.place_forget()
@@ -81,8 +82,9 @@ def gameToClear(self):
     sm.showNumber1.pack_forget()
     sm.showNumber2.pack_forget()
     sm.showNumber3.pack_forget()
-    sm.message.place(x=310, y=130)
     sm.reset.place_forget()
+
+    sm.message.place(x=310, y=130)
     sm.backToStart.place(x=700, y=100)
 
 
@@ -100,6 +102,7 @@ def clearToStart(self):
     sm.ruleFrame.pack(pady=0)
     sm.creditFrame.pack(pady=0)
 
+    sm.titleLabel1.focus_set()
     sm.timeLabel.place_forget()
     sm.backToStart.place_forget()
 
