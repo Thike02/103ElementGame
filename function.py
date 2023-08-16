@@ -44,6 +44,10 @@ def game_to_start(self):
     sm.move_frame.pack_forget()
     sm.rule_frame.pack_forget()
     sm.credit_frame.pack_forget()
+    children_widget = record_frame.winfo_children()
+    for child in children_widget:
+        child.destroy()
+    record_frame.pack_forget()
 
     sm.title_frame.pack(pady=0)
     sm.move_frame.pack(pady=10)
@@ -153,7 +157,6 @@ def select_number(self):
             pos[i] = 20
 
     answer = product % DIVNUM
-    print(answer)
     sm.number1.place(x=70 + pos[0], y=105)
     sm.number2.place(x=70 + pos[1], y=105)
     sm.number3.place(x=70 + pos[2], y=105)
