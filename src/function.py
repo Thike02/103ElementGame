@@ -180,6 +180,8 @@ def reset(self):
 
 def judge(self):
     global q_count, pass_time, ans_element
+    if q_count > MAX:
+        return
     response = sm.input_element.get()
     cursor.execute("select * from periodic where id=" + str(answer))
     ans_element[q_count - 1] = cursor.fetchone()[1]
@@ -189,6 +191,7 @@ def judge(self):
             question_counter(self)
             select_number(self)
         else:
+            q_count += 1
             game_to_clear(self)
     else:
         sm.input_element.configure(fg="red")
